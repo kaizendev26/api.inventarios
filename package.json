@@ -1,6 +1,23 @@
 {
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.19.1",
+    "mysql2": "^3.9.3",
     "pg": "^8.11.3"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "name": "api.inventarios",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module"
 }
