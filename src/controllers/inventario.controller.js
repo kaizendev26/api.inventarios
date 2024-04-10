@@ -12,13 +12,14 @@ export const obtenerInventario = async (req, res) => {
 };
 
 export const agregarInventario = async (req, res) => {
-  const { idProducto, cantidadActual, ventaDelDia } = req.body;
+  const { idProducto, cantidadActual, ventaDelDia, fecha } = req.body;
 
   try {
-    const [rows] = await pool.query("call agregarInventario(?,?,?,?)", [
+    const [rows] = await pool.query("call agregarInventario(?,?,?,?,?)", [
       idProducto,
       cantidadActual,
       ventaDelDia,
+      fecha,
       null,
     ]);
     if (rows.affectedRows <= 0) return res.status(404).json({ message: 0 });
